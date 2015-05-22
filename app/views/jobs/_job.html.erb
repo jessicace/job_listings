@@ -1,0 +1,16 @@
+<!-- 
+<%= job.title %>
+<%= job.company %>
+<%= job.views %>
+<%= job.salary %>
+<%= job.expires_after %>
+<%= link_to(job.title, job_path(job)) %>
+-->
+		<tr>
+			<td><%= job.title %></td>
+			<td><%= job.company %></td>
+			<td><%= job.views %></td>
+			<td><%= job.salary %></td>
+			<td><%= job.expires_after %></td>
+			<td><%= link_to(job.title, job_path(job)) %></td>
+		</tr>

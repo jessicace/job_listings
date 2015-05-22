@@ -1,0 +1,42 @@
+<h2><%= @job.title %></h2>
+<%= link_to("Delete", job_path(@job), method: :delete, confirm: "Are you sure?") %>
+<%= link_to("Edit", edit_job_path(@job)) %>
+<%= link_to("Index", jobs_path) %>
+<table>
+	<tr>
+		<th>Company</th>
+		<td><%= @job.company %></td>
+	</tr>
+	<tr>
+		<th>Start Date</th>
+		<td><%= @job.start_date %></td>
+	</tr>
+	<tr>
+		<th>Salary</th>
+		<td><%= number_to_currency(@job.salary) %></td>
+	</tr>
+	<tr>
+		<th>Description</th>
+		<td><%= @job.description %></td>
+	</tr>
+	<tr>
+		<th>Contact Name</th>
+		<td><%= @job.contact_name %></td>
+	</tr>
+	<tr>
+		<th>Contact Email</th>
+		<td><%= @job.contact_email %></td>
+	</tr>
+	<tr>
+		<th>Contact Number</th>
+		<td><%= @job.contact_number %></td>
+	</tr>
+	<tr>
+		<th>Views</th>
+		<td><%= @job.views %></td>
+	</tr>
+	<tr>
+		<th>Published?</th>
+		<td><%= @job.published %></td>
+	</tr>
+</table>

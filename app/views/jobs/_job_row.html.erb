@@ -1,0 +1,15 @@
+<% if job_row.published? %>
+	<tr>
+		<td><%= link_to(job_row.title, job_path(job_row)) %></td>
+		<td><%= job_row.company %></td>
+		<td><%= job_row.views %></td>
+		<td><%= number_to_currency(job_row.salary) %></td>
+		<td><%= time_ago_in_words(job_row.created_at) %></td>
+		<td><%= time_ago_in_words(job_row.updated_at) %></td>
+		<td>
+			<% if top_job?(job_row) %>
+				Popular!
+			<% end %>
+		</td>
+	</tr>
+<% end %>

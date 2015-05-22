@@ -1,0 +1,41 @@
+<% if @job.errors.any? %>
+	<div id="error_explanation">
+		<ul>
+			<% @job.errors.full_messages.each do |message| %>
+				<li><%= message %></li>
+			<% end %>
+		</ul>
+	</div>
+<% end %>
+
+<%= form_for @job do |form| %>
+	<fieldset>
+		<legend>Position Details</legend>
+		<%= form.label :title %>
+		<%= form.text_field :title %><br/>
+		<%= form.label :company %>
+		<%= form.text_field :company %><br/>
+		<%= form.label :description %>
+		<%= form.text_area :description %><br/>
+		<%= form.label :salary %>
+		<%= form.text_field :salary %><br/>
+		<%= form.label :start_date %>
+		<%= form.date_field :start_date %><br/>
+	</fieldset>
+	
+	<fieldset>
+		<legend>Contact Details</legend>
+		<%= form.label :contact_name %>
+		<%= form.text_field :contact_name %><br/>
+		<%= form.label :contact_email %>
+		<%= form.email_field :contact_email %><br/>
+		<%= form.label :contact_number %>
+		<%= form.telephone_field :contact_number %><br/>
+	</fieldset>
+
+	<div>
+		<%= form.label "Publish now?" %>
+		<%= form.check_box :published %>
+	</div>
+	<%= form.submit %>
+<% end %>

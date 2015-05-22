@@ -1,0 +1,25 @@
+<h2>Job Listings</h2>
+<hr>
+
+<nav>
+	<ul>
+		<li><%= link_to("New Job Listing", new_job_path) %></li>
+	</ul>
+</nav>
+
+<table>
+	<thead>
+		<tr>
+			<th>Position</th>
+			<th>Company</th>
+			<th>Views</th>
+			<th>Salary</th>
+			<th>Created</th>
+			<th>Last Updated</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<%= render partial: 'job_row', collection: @jobs %>
+	</tbody>
+</table>

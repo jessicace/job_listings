@@ -1,0 +1,20 @@
+<h1>Welcome</h1>
+  <%= form_tag jobs_create_path do %>
+	  <%= label_tag 'title', 'Job Title:'%>
+	  <%= text_field_tag 'title' %><br>
+	  <%= label_tag 'company', 'Company:'%>
+	  <%= text_field_tag 'company' %><br>
+	  <%= label_tag 'about', 'Job Description:' %>
+	  <%= text_area_tag 'about' %><br>
+	  <%= label_tag 'start_date', 'Start Date:'%>
+	  <%= date_field_tag 'start_date', '01/01/2015' %><br>
+	  <%= label_tag 'name', 'Contact Name:'%>
+	  <%= text_field_tag 'name' %><br>
+	  <%= label_tag 'email', 'Contact Email:'%>
+	  <%= email_field_tag 'email', 'email@example.com' %><br>
+	  <%= label_tag 'contact_no', 'Contact Number:' %>
+	  <%= telephone_field_tag 'contact_no', '0123456789' %><br>
+	  <%= label_tag 'website', 'Company Website:' %>
+	  <%= url_field_tag 'website' %><br>
+	  <%= submit_tag "Submit" %>
+  <% end %>
